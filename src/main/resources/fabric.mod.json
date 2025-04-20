@@ -5,7 +5,7 @@
 	"name": "Titan's Rebirth",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"Unreal"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"me.unreal.titansrebirth.TitansRebirthDataGenerator"
+		],
+		"client": [
+			"me.unreal.titansrebirth.TitansRebirthClient"
 		]
 	},
 	"mixins": [
