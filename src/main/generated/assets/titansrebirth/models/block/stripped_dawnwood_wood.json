@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "titansrebirth:block/stripped_dawnwood_log",
+    "side": "titansrebirth:block/stripped_dawnwood_log"
+  }
+}

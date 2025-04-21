@@ -1,5 +1,7 @@
 package me.unreal.titansrebirth;
 
+import me.unreal.titansrebirth.block.BasicBlocks;
+import me.unreal.titansrebirth.item.TRItemGroups;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -18,6 +20,9 @@ public class TitansRebirth implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+
+		BasicBlocks.registerModBlocks();
+		TRItemGroups.registerItemGroups();
 
 		LOGGER.info("Hello Fabric world!");
 	}

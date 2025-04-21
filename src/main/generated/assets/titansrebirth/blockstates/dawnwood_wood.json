@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "titansrebirth:block/dawnwood_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "titansrebirth:block/dawnwood_wood"
+    },
+    "axis=z": {
+      "model": "titansrebirth:block/dawnwood_wood",
+      "x": 90
+    }
+  }
+}
