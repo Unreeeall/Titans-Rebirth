@@ -26,6 +26,7 @@ public class TitansRebirth implements ModInitializer {
 		TRBasicItems.registerModItems();
 		TRItemGroups.registerItemGroups();
 
+
 		LOGGER.info("Hello Fabric world!");
 	}
 }
