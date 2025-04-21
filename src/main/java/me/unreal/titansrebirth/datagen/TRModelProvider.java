@@ -12,7 +12,7 @@ public class TRModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 
-
+        blockStateModelGenerator.registerSimpleCubeAll(BasicBlocks.DAWNWOOD_PLANKS);
         blockStateModelGenerator.registerLog(BasicBlocks.DAWNWOOD_LOG).log(BasicBlocks.DAWNWOOD_LOG).wood(BasicBlocks.DAWNWOOD_WOOD);
         blockStateModelGenerator.registerLog(BasicBlocks.STRIPPED_DAWNWOOD_LOG).log(BasicBlocks.STRIPPED_DAWNWOOD_LOG).wood(BasicBlocks.STRIPPED_DAWNWOOD_WOOD);
     }

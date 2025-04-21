@@ -27,6 +27,9 @@ public class BasicBlocks {
     public static final Block STRIPPED_DAWNWOOD_WOOD = registerBlock("stripped_dawnwood_wood",
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_OAK_WOOD)));
 
+    public static final Block DAWNWOOD_PLANKS = registerBlock("dawnwood_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+
     /* Netherthorn */
 
     /* Titanbloom */
