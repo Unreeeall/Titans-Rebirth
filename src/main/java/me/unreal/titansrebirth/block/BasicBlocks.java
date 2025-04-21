@@ -1,10 +1,7 @@
 package me.unreal.titansrebirth.block;
 
 import me.unreal.titansrebirth.TitansRebirth;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.PillarBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -29,6 +26,9 @@ public class BasicBlocks {
 
     public static final Block DAWNWOOD_PLANKS = registerBlock("dawnwood_planks",
             new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+
+    public static final Block DAWNWOOD_LEAVES = registerBlock("dawnwood_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
 
     /* Netherthorn */
 

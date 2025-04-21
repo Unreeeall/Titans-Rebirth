@@ -21,6 +21,7 @@ public class TRItemGroups {
                         entries.add(BasicBlocks.STRIPPED_DAWNWOOD_LOG);
                         entries.add(BasicBlocks.STRIPPED_DAWNWOOD_WOOD);
                         entries.add(BasicBlocks.DAWNWOOD_PLANKS);
+                        entries.add(BasicBlocks.DAWNWOOD_LEAVES);
 
                     }).build());
 

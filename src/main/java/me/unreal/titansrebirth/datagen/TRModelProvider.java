@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.TexturedModel;
 
 public class TRModelProvider extends FabricModelProvider {
     public TRModelProvider(FabricDataOutput output) { super(output); }
@@ -15,6 +16,7 @@ public class TRModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(BasicBlocks.DAWNWOOD_PLANKS);
         blockStateModelGenerator.registerLog(BasicBlocks.DAWNWOOD_LOG).log(BasicBlocks.DAWNWOOD_LOG).wood(BasicBlocks.DAWNWOOD_WOOD);
         blockStateModelGenerator.registerLog(BasicBlocks.STRIPPED_DAWNWOOD_LOG).log(BasicBlocks.STRIPPED_DAWNWOOD_LOG).wood(BasicBlocks.STRIPPED_DAWNWOOD_WOOD);
+        blockStateModelGenerator.registerSingleton(BasicBlocks.DAWNWOOD_LEAVES, TexturedModel.LEAVES);
     }
 
     @Override

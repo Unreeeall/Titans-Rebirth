@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "titansrebirth:block/dawnwood_leaves"
+  }
+}
