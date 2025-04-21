@@ -24,5 +24,6 @@ public class TRModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(TRBasicItems.DAWNWOOD_STICK, Models.GENERATED);
+        itemModelGenerator.register(TRBasicItems.DAWNWOOD_STICK2, Models.GENERATED);
     }
 }

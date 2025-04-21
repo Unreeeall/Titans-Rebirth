@@ -14,6 +14,9 @@ public class TRBasicItems {
     public static final Item DAWNWOOD_STICK = registerItem("dawnwood_stick",
             new Item(new Item.Settings()));
 
+    public static final Item DAWNWOOD_STICK2 = registerItem("dawnwood_stick2",
+            new Item(new Item.Settings()));
+
 
 
 
