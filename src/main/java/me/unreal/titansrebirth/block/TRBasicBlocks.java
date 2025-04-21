@@ -8,7 +8,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class BasicBlocks {
+public class TRBasicBlocks {
 
 
     /* Dawnwood set  */
