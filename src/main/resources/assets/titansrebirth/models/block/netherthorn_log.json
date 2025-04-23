@@ -1,7 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"3": "titansrebirth:block/netherthorn_log_texture"
+		"3": "titansrebirth:block/netherthorn_log_texture",
+		"particle": "titansrebirth:block/netherthorn_log_texture"
 	},
 	"elements": [
 		{

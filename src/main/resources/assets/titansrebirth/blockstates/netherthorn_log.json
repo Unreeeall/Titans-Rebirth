@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "titansrebirth:block/netherthorn_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "titansrebirth:block/netherthorn_log"
+    },
+    "axis=z": {
+      "model": "titansrebirth:block/netherthorn_log",
+      "x": 90
     }
   }
 }
