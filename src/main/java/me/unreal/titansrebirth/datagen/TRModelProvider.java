@@ -1,6 +1,6 @@
 package me.unreal.titansrebirth.datagen;
 
-import me.unreal.titansrebirth.block.TRBasicBlocks;
+import me.unreal.titansrebirth.block.TRBlocks;
 import me.unreal.titansrebirth.item.TRBasicItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -15,10 +15,10 @@ public class TRModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 
-        blockStateModelGenerator.registerSimpleCubeAll(TRBasicBlocks.DAWNWOOD_PLANKS);
-        blockStateModelGenerator.registerLog(TRBasicBlocks.DAWNWOOD_LOG).log(TRBasicBlocks.DAWNWOOD_LOG).wood(TRBasicBlocks.DAWNWOOD_WOOD);
-        blockStateModelGenerator.registerLog(TRBasicBlocks.STRIPPED_DAWNWOOD_LOG).log(TRBasicBlocks.STRIPPED_DAWNWOOD_LOG).wood(TRBasicBlocks.STRIPPED_DAWNWOOD_WOOD);
-        blockStateModelGenerator.registerSingleton(TRBasicBlocks.DAWNWOOD_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(TRBlocks.DAWNWOOD_PLANKS);
+        blockStateModelGenerator.registerLog(TRBlocks.DAWNWOOD_LOG).log(TRBlocks.DAWNWOOD_LOG).wood(TRBlocks.DAWNWOOD_WOOD);
+        blockStateModelGenerator.registerLog(TRBlocks.STRIPPED_DAWNWOOD_LOG).log(TRBlocks.STRIPPED_DAWNWOOD_LOG).wood(TRBlocks.STRIPPED_DAWNWOOD_WOOD);
+        blockStateModelGenerator.registerSingleton(TRBlocks.DAWNWOOD_LEAVES, TexturedModel.LEAVES);
     }
 
     @Override

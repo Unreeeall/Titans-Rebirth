@@ -1,6 +1,6 @@
 package me.unreal.titansrebirth;
 
-import me.unreal.titansrebirth.block.TRBasicBlocks;
+import me.unreal.titansrebirth.block.TRBlocks;
 import me.unreal.titansrebirth.item.TRBasicItems;
 import me.unreal.titansrebirth.item.TRItemGroups;
 import net.fabricmc.api.ModInitializer;
@@ -22,7 +22,7 @@ public class TitansRebirth implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		TRBasicBlocks.registerModBlocks();
+		TRBlocks.registerModBlocks();
 		TRBasicItems.registerModItems();
 		TRItemGroups.registerItemGroups();
 

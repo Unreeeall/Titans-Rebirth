@@ -1,6 +1,7 @@
 package me.unreal.titansrebirth.block;
 
 import me.unreal.titansrebirth.TitansRebirth;
+import me.unreal.titansrebirth.block.custom.NetherThornLogBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -8,7 +9,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class TRBasicBlocks {
+public class TRBlocks {
 
 
     /* Dawnwood set  */
@@ -31,6 +32,12 @@ public class TRBasicBlocks {
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
 
     /* Netherthorn */
+    public static final Block NETHERTHORN_LOG = registerBlock("netherthorn_log",
+            new NetherThornLogBlock(AbstractBlock.Settings.create()
+                    .strength(4f)
+                    .requiresTool()
+            ));
+
 
     /* Titanbloom */
 

@@ -1,7 +1,7 @@
 package me.unreal.titansrebirth.item;
 
 import me.unreal.titansrebirth.TitansRebirth;
-import me.unreal.titansrebirth.block.TRBasicBlocks;
+import me.unreal.titansrebirth.block.TRBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -15,13 +15,14 @@ public class TRItemGroups {
     public static final ItemGroup TR_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TitansRebirth.MOD_ID, "tr_blocks"),
             FabricItemGroup.builder().displayName(Text.translatable("Titan's Rebirth Blocks"))
-                    .icon(() -> new ItemStack(TRBasicBlocks.DAWNWOOD_LOG)).entries((displayContext, entries) -> {
-                        entries.add(TRBasicBlocks.DAWNWOOD_LOG);
-                        entries.add(TRBasicBlocks.DAWNWOOD_WOOD);
-                        entries.add(TRBasicBlocks.STRIPPED_DAWNWOOD_LOG);
-                        entries.add(TRBasicBlocks.STRIPPED_DAWNWOOD_WOOD);
-                        entries.add(TRBasicBlocks.DAWNWOOD_PLANKS);
-                        entries.add(TRBasicBlocks.DAWNWOOD_LEAVES);
+                    .icon(() -> new ItemStack(TRBlocks.DAWNWOOD_LOG)).entries((displayContext, entries) -> {
+                        entries.add(TRBlocks.DAWNWOOD_LOG);
+                        entries.add(TRBlocks.DAWNWOOD_WOOD);
+                        entries.add(TRBlocks.STRIPPED_DAWNWOOD_LOG);
+                        entries.add(TRBlocks.STRIPPED_DAWNWOOD_WOOD);
+                        entries.add(TRBlocks.DAWNWOOD_PLANKS);
+                        entries.add(TRBlocks.DAWNWOOD_LEAVES);
+                        entries.add(TRBlocks.NETHERTHORN_LOG);
 
                     }).build());
 
