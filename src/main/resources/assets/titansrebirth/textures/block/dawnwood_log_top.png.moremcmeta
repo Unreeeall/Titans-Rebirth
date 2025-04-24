@@ -1,0 +1,6 @@
+{
+  "overlay": {
+    "texture": "titansrebirth:textures/block/dawnwood_log_top_e.png",
+    "emissive": true
+  }
+}

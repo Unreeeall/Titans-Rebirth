@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "titansrebirth",
 	"version": "${version}",
-	"name": "Titan's Rebirth",
+	"name": "Titans Rebirth",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Unreal"
