@@ -1,0 +1,6 @@
+{
+  "overlay": {
+    "texture": "titansrebirth:textures/block/netherthorn_log_texture_e.png",
+    "emissive": true
+  }
+}

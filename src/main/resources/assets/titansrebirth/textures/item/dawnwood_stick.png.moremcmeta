@@ -1,0 +1,7 @@
+{
+  "overlay": {
+    "texture": "titansrebirth:textures/item/dawnwood_stick_e.png",
+    "emissive": true,
+    "transparency": "translucent"
+  }
+}
