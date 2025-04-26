@@ -8,12 +8,12 @@
     "smoothAlpha": false,
     "width": 16,
     "height": 16,
-    "frametime": 2,
+    "frametime": 1,
     "frames": [
-      0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ,
+      0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
       {
         "index": 13,
-        "time": 40
+        "time": 25
       },
       14
     ]
