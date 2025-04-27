@@ -15,10 +15,21 @@ public class TRModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 
-        blockStateModelGenerator.registerSimpleCubeAll(TRBlocks.DAWNWOOD_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool dawnwoodPlankTexturePool = blockStateModelGenerator.registerCubeAllModelTexturePool(TRBlocks.DAWNWOOD_PLANKS);
         blockStateModelGenerator.registerLog(TRBlocks.DAWNWOOD_LOG).log(TRBlocks.DAWNWOOD_LOG).wood(TRBlocks.DAWNWOOD_WOOD);
         blockStateModelGenerator.registerLog(TRBlocks.STRIPPED_DAWNWOOD_LOG).log(TRBlocks.STRIPPED_DAWNWOOD_LOG).wood(TRBlocks.STRIPPED_DAWNWOOD_WOOD);
         blockStateModelGenerator.registerSingleton(TRBlocks.DAWNWOOD_LEAVES, TexturedModel.LEAVES);
+
+        dawnwoodPlankTexturePool.stairs(TRBlocks.DAWNWOOD_STAIRS);
+        dawnwoodPlankTexturePool.slab(TRBlocks.DAWNWOOD_SLAB);
+        dawnwoodPlankTexturePool.button(TRBlocks.DAWNWOOD_BUTTON);
+        dawnwoodPlankTexturePool.pressurePlate(TRBlocks.DAWNWOOD_PRESSURE_PLATE);
+        dawnwoodPlankTexturePool.fence(TRBlocks.DAWNWOOD_FENCE);
+        dawnwoodPlankTexturePool.fenceGate(TRBlocks.DAWNWOOD_FENCE_GATE);
+        dawnwoodPlankTexturePool.wall(TRBlocks.DAWNWOOD_WALL);
+
+        blockStateModelGenerator.registerDoor(TRBlocks.DAWNWOOD_DOOR);
+        blockStateModelGenerator.registerTrapdoor(TRBlocks.DAWNWOOD_TRAPDOOR);
     }
 
     @Override

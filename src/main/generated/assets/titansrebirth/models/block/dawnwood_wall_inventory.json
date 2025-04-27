@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "titansrebirth:block/dawnwood_planks"
+  }
+}

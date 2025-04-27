@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "titansrebirth:block/dawnwood_slab"
+    },
+    "type=double": {
+      "model": "titansrebirth:block/dawnwood_planks"
+    },
+    "type=top": {
+      "model": "titansrebirth:block/dawnwood_slab_top"
+    }
+  }
+}

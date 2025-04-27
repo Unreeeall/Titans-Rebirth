@@ -31,6 +31,55 @@ public class TRBlocks {
     public static final Block DAWNWOOD_LEAVES = registerBlock("dawnwood_leaves",
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES)));
 
+    public static final Block DAWNWOOD_STAIRS = registerBlock("dawnwood_stairs",
+            new StairsBlock(TRBlocks.DAWNWOOD_PLANKS.getDefaultState(), AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .requiresTool()
+            ));
+
+    public static final Block DAWNWOOD_SLAB = registerBlock("dawnwood_slab",
+            new SlabBlock(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .requiresTool()
+            ));
+
+    public static final Block DAWNWOOD_BUTTON = registerBlock("dawnwood_button",
+            new ButtonBlock(BlockSetType.OAK, 4, AbstractBlock.Settings.create()
+                    .requiresTool()
+            ));
+
+    public static final Block DAWNWOOD_PRESSURE_PLATE = registerBlock("dawnwood_pressure_plate",
+            new PressurePlateBlock(BlockSetType.OAK, AbstractBlock.Settings.create()
+                    .requiresTool()
+            ));
+
+    public static final Block DAWNWOOD_FENCE = registerBlock("dawnwood_fence",
+            new FenceBlock(AbstractBlock.Settings.create()
+                    .requiresTool()
+            ));
+
+    public static final Block DAWNWOOD_FENCE_GATE = registerBlock("dawnwood_fence_gate",
+            new FenceGateBlock(WoodType.ACACIA, AbstractBlock.Settings.create()
+                    .requiresTool()
+            ));
+
+    public static final Block DAWNWOOD_WALL = registerBlock("dawnwood_wall",
+            new WallBlock(AbstractBlock.Settings.create()
+                    .requiresTool()
+            ));
+
+    public static final Block DAWNWOOD_DOOR = registerBlock("dawnwood_door",
+            new DoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create()
+                    .requiresTool()
+                    .nonOpaque()
+            ));
+
+    public static final Block DAWNWOOD_TRAPDOOR = registerBlock("dawnwood_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create()
+                    .requiresTool()
+                    .nonOpaque()
+            ));
+
     /* Netherthorn */
     public static final Block NETHERTHORN_LOG = registerBlock("netherthorn_log",
             new NetherThornLogBlock(AbstractBlock.Settings.create()

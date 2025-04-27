@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "titansrebirth:block/dawnwood_planks",
+    "side": "titansrebirth:block/dawnwood_planks",
+    "top": "titansrebirth:block/dawnwood_planks"
+  }
+}

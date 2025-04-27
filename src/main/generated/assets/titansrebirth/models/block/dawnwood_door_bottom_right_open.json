@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "textures": {
+    "bottom": "titansrebirth:block/dawnwood_door_bottom",
+    "top": "titansrebirth:block/dawnwood_door_top"
+  }
+}

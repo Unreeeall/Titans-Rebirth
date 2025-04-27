@@ -16,12 +16,24 @@ public class TRItemGroups {
             Identifier.of(TitansRebirth.MOD_ID, "tr_blocks"),
             FabricItemGroup.builder().displayName(Text.translatable("Titan's Rebirth Blocks"))
                     .icon(() -> new ItemStack(TRBlocks.DAWNWOOD_LOG)).entries((displayContext, entries) -> {
+                        /* Dawnwood */
                         entries.add(TRBlocks.DAWNWOOD_LOG);
                         entries.add(TRBlocks.DAWNWOOD_WOOD);
                         entries.add(TRBlocks.STRIPPED_DAWNWOOD_LOG);
                         entries.add(TRBlocks.STRIPPED_DAWNWOOD_WOOD);
                         entries.add(TRBlocks.DAWNWOOD_PLANKS);
                         entries.add(TRBlocks.DAWNWOOD_LEAVES);
+                        entries.add(TRBlocks.DAWNWOOD_STAIRS);
+                        entries.add(TRBlocks.DAWNWOOD_SLAB);
+                        entries.add(TRBlocks.DAWNWOOD_BUTTON);
+                        entries.add(TRBlocks.DAWNWOOD_PRESSURE_PLATE);
+                        entries.add(TRBlocks.DAWNWOOD_FENCE_GATE);
+                        entries.add(TRBlocks.DAWNWOOD_FENCE);
+                        entries.add(TRBlocks.DAWNWOOD_TRAPDOOR);
+                        entries.add(TRBlocks.DAWNWOOD_DOOR);
+                        entries.add(TRBlocks.DAWNWOOD_WALL);
+
+
                         entries.add(TRBlocks.NETHERTHORN_LOG);
 
                     }).build());
