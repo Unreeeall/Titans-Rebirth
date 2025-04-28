@@ -5,17 +5,20 @@
   },
   "animation": {
     "interpolate": true,
-    "smoothAlpha": false,
+    "smoothAlpha": true,
     "width": 16,
     "height": 16,
-    "frametime": 1,
+    "frametime": 6,
     "frames": [
       0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
       {
         "index": 13,
         "time": 25
       },
-      14
+      {
+        "index": 14,
+        "time": 30
+      }
     ]
   }
 }
