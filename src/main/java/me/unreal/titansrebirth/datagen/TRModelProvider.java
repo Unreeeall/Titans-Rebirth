@@ -30,6 +30,7 @@ public class TRModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerDoor(TRBlocks.DAWNWOOD_DOOR);
         blockStateModelGenerator.registerTrapdoor(TRBlocks.DAWNWOOD_TRAPDOOR);
+        blockStateModelGenerator.registerSimpleCubeAll(TRBlocks.SMOOTH_DAWNWOOD_PLANKS);
     }
 
     @Override

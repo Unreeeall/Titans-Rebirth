@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "titansrebirth:block/smooth_dawnwood_planks"
+  }
+}

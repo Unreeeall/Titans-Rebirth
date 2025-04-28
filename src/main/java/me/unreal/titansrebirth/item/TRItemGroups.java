@@ -14,7 +14,7 @@ public class TRItemGroups {
 
     public static final ItemGroup TR_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TitansRebirth.MOD_ID, "tr_blocks"),
-            FabricItemGroup.builder().displayName(Text.translatable("Titan's Rebirth Blocks"))
+            FabricItemGroup.builder().displayName(Text.translatable("Titans Rebirth Blocks"))
                     .icon(() -> new ItemStack(TRBlocks.DAWNWOOD_LOG)).entries((displayContext, entries) -> {
                         /* Dawnwood */
                         entries.add(TRBlocks.DAWNWOOD_LOG);
@@ -32,6 +32,7 @@ public class TRItemGroups {
                         entries.add(TRBlocks.DAWNWOOD_TRAPDOOR);
                         entries.add(TRBlocks.DAWNWOOD_DOOR);
                         entries.add(TRBlocks.DAWNWOOD_WALL);
+                        entries.add(TRBlocks.SMOOTH_DAWNWOOD_PLANKS);
 
 
                         entries.add(TRBlocks.NETHERTHORN_LOG);
@@ -41,7 +42,7 @@ public class TRItemGroups {
 
     public static final ItemGroup TR_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TitansRebirth.MOD_ID, "tr_items"),
-            FabricItemGroup.builder().displayName(Text.translatable("Titan's Rebirth Items"))
+            FabricItemGroup.builder().displayName(Text.translatable("Titans Rebirth Items"))
                     .icon(() -> new ItemStack(TRBasicItems.DAWNWOOD_STICK)).entries((displayContext, entries) -> {
                         entries.add(TRBasicItems.DAWNWOOD_STICK);
                     }).build());

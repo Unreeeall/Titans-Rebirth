@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-27T12:57:47.5002353	Titans Rebirth/Model Definitions
+// 1.21.1	2025-04-28T18:16:33.9790162	Titans Rebirth/Model Definitions
 caae1a7369b0890f5d251e6fb0f30eb3a6c39366 assets\titansrebirth\models\block\dawnwood_slab.json
 585692c447017dbdfdb0dcd57c423be21c30f537 assets\titansrebirth\blockstates\dawnwood_fence_gate.json
 90202ec1dddc4bc8c6543746af81080043378289 assets\titansrebirth\models\block\dawnwood_fence_inventory.json
@@ -15,6 +15,7 @@ c6a73812bfa776b355e10e64925528dc64436ffb assets\titansrebirth\models\block\strip
 e154383f8a398af0b2a25fb0269cc78cda9fe922 assets\titansrebirth\models\item\dawnwood_trapdoor.json
 e74b98f44a7f376136cf3d9806536b36941896e4 assets\titansrebirth\models\item\dawnwood_log.json
 386df8475474b0d98a83a35b39b8ef23e2d88ea3 assets\titansrebirth\models\block\dawnwood_wall_side_tall.json
+ab691013b11505cc7bf5cbe60976fec9e2784c8e assets\titansrebirth\blockstates\smooth_dawnwood_planks.json
 cd5939d61b82ba6f1b992b46d1077e2da625a0e4 assets\titansrebirth\models\block\dawnwood_door_bottom_right_open.json
 7ee3f1c666d325e82bdc7be0a049aa86f0bc52c7 assets\titansrebirth\blockstates\dawnwood_trapdoor.json
 eb74174c0014256fc22581935921daf77af41456 assets\titansrebirth\models\item\dawnwood_stick2.json
@@ -32,6 +33,7 @@ cea41890f7e545e01e880c8fc7353071063b0598 assets\titansrebirth\models\block\dawnw
 68646ba7e413c56535861da1b8f25dcb31b0072f assets\titansrebirth\models\item\dawnwood_button.json
 31198d5e8be4d7fc3a4129b89b0fdd3833819842 assets\titansrebirth\models\block\dawnwood_planks.json
 67ff26bb8f875cbc9f6af9afe2d357b98abffcc1 assets\titansrebirth\blockstates\dawnwood_slab.json
+c9e1df621217911a015a311583ed7d32c8e87efb assets\titansrebirth\models\block\smooth_dawnwood_planks.json
 edef55eee143d87f452ab63ef2059504951bccfb assets\titansrebirth\models\block\dawnwood_wall_inventory.json
 038bac43b72d538dd82fb8f3a29649903f6628a1 assets\titansrebirth\models\block\dawnwood_fence_gate.json
 2e91faed2e00d9dbb16daf101500d24631ef5816 assets\titansrebirth\models\block\dawnwood_stairs.json
@@ -68,6 +70,7 @@ a60c1895a9389dd7f7c9fcc181b34db1d6a396ab assets\titansrebirth\models\block\dawnw
 19119d304d033905f9c834ac0641f5fa2b1a1da5 assets\titansrebirth\models\block\dawnwood_log.json
 499257ab891916c419b29714e70a5b5c321b8662 assets\titansrebirth\models\item\dawnwood_stick.json
 5f52765877ee3c3794f13ace8fadd313e6a8c3f8 assets\titansrebirth\models\block\dawnwood_stairs_inner.json
+b4ce5f71ce30cbae9719c74ffbf99a47a0a214e0 assets\titansrebirth\models\item\smooth_dawnwood_planks.json
 b48351664329a7a0e50195cf2986e6e6091c9fb5 assets\titansrebirth\models\block\dawnwood_wood.json
 3f16d963fb71dc1344558c93aa208e2fb1bc68ff assets\titansrebirth\models\block\dawnwood_fence_post.json
 9614fa8df94b0baeb52eb9833e4570153059d525 assets\titansrebirth\models\block\dawnwood_trapdoor_top.json

@@ -80,6 +80,9 @@ public class TRBlocks {
                     .nonOpaque()
             ));
 
+    public static final Block SMOOTH_DAWNWOOD_PLANKS = registerBlock("smooth_dawnwood_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
+
     /* Netherthorn */
     public static final Block NETHERTHORN_LOG = registerBlock("netherthorn_log",
             new NetherThornLogBlock(AbstractBlock.Settings.create()
