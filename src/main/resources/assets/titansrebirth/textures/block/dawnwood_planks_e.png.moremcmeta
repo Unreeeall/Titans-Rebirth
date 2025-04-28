@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "blur": false,
+    "clamp": true
+  },
+  "animation": {
+    "interpolate": true,
+    "smoothAlpha": true,
+    "frametime": 10,
+    "frames": [
+      0,
+      {
+        "index": 1,
+        "time": 20
+      },
+      {
+        "index": 2,
+        "time": 40
+      }
+    ]
+  }
+}

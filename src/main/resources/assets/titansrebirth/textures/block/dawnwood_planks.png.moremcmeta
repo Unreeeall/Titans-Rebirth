@@ -1,0 +1,6 @@
+{
+  "overlay": {
+    "texture": "titansrebirth:textures/block/dawnwood_planks_e.png",
+    "emissive": true
+  }
+}
