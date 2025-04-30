@@ -3,8 +3,7 @@ package me.unreal.titansrebirth.item;
 import me.unreal.titansrebirth.TitansRebirth;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -16,6 +15,9 @@ public class TRBasicItems {
 
     public static final Item DAWNWOOD_STICK2 = registerItem("dawnwood_stick2",
             new Item(new Item.Settings()));
+
+    public static final Item DAWN_BLADE = registerItem("dawn_blade",
+            new SwordItem(ToolMaterials.DIAMOND, new Item.Settings()));
 
 
 

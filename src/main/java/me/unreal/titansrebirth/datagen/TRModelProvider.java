@@ -37,5 +37,6 @@ public class TRModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(TRBasicItems.DAWNWOOD_STICK, Models.HANDHELD_ROD);
         itemModelGenerator.register(TRBasicItems.DAWNWOOD_STICK2, Models.GENERATED);
+        //itemModelGenerator.register(TRBasicItems.DAWN_BLADE, Models.HANDHELD);
     }
 }

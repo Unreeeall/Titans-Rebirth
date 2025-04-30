@@ -45,6 +45,8 @@ public class TRItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("Titans Rebirth Items"))
                     .icon(() -> new ItemStack(TRBasicItems.DAWNWOOD_STICK)).entries((displayContext, entries) -> {
                         entries.add(TRBasicItems.DAWNWOOD_STICK);
+                        //entries.add(TRBasicItems.DAWNWOOD_STICK2);
+                        entries.add(TRBasicItems.DAWN_BLADE);
                     }).build());
 
 
