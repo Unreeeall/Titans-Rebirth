@@ -1,41 +1,62 @@
 package me.unreal.titansrebirth.item;
 
+import com.google.common.base.Suppliers;
+import me.unreal.titansrebirth.util.TRTags;
 import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 
+import java.util.function.Supplier;
+
 public enum TRToolMaterials implements ToolMaterial {
-    DAWNWOOD;
+    DAWN(TRTags.Blocks.INCORRECT_FOR_DAWN_TOOL, 1500, 7.0F, 2.0F, 22, () -> Ingredient.ofItems(TRBasicItems.DAWNWOOD_STICK));
+
+    private final TagKey<Block> inverseTag;
+    private final int itemDurability;
+    private final float miningSpeed;
+    private final float attackDamage;
+    private final int enchantability;
+    private final Supplier<Ingredient> repairIngredient;
+
+    TRToolMaterials(TagKey<Block> inverseTag, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
+        this.inverseTag = inverseTag;
+        this.itemDurability = itemDurability;
+        this.miningSpeed = miningSpeed;
+        this.attackDamage = attackDamage;
+        this.enchantability = enchantability;
+        this.repairIngredient = Suppliers.memoize(repairIngredient::get);
+    }
+
 
     @Override
     public int getDurability() {
-        return 0;
+        return this.itemDurability;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 0;
+        return this.miningSpeed;
     }
 
     @Override
     public float getAttackDamage() {
-        return 0;
+        return this.attackDamage;
     }
 
     @Override
     public TagKey<Block> getInverseTag() {
-        return null;
+        return this.inverseTag;
     }
 
     @Override
     public int getEnchantability() {
-        return 0;
+        return this.enchantability;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return null;
+        return this.repairIngredient.get();
     }
 }

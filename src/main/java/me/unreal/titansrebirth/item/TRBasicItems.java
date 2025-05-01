@@ -1,6 +1,7 @@
 package me.unreal.titansrebirth.item;
 
 import me.unreal.titansrebirth.TitansRebirth;
+import me.unreal.titansrebirth.item.custom.DawnBladeItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
@@ -18,10 +19,9 @@ public class TRBasicItems {
             new Item(new Item.Settings()));
 
     public static final Item DAWN_BLADE = registerItem("dawn_blade",
-            new SwordItem(ToolMaterials.DIAMOND, new Item.Settings()
+            new DawnBladeItem(TRToolMaterials.DAWN, new Item.Settings()
                     .rarity(Rarity.RARE)
-                    .maxDamage(600)
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 5, -2.8F))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(TRToolMaterials.DAWN, 5, -2.8F))));
 
 
 
