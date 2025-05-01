@@ -7,6 +7,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 public class TRBasicItems {
 
@@ -17,7 +18,10 @@ public class TRBasicItems {
             new Item(new Item.Settings()));
 
     public static final Item DAWN_BLADE = registerItem("dawn_blade",
-            new SwordItem(ToolMaterials.DIAMOND, new Item.Settings()));
+            new SwordItem(ToolMaterials.DIAMOND, new Item.Settings()
+                    .rarity(Rarity.RARE)
+                    .maxDamage(600)
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 5, -2.8F))));
 
 
 
