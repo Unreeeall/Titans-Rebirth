@@ -1,13 +1,19 @@
 package me.unreal.titansrebirth.item.custom;
 
+import me.unreal.titansrebirth.TitansRebirth;
+import me.unreal.titansrebirth.block.TRBlocks;
+import me.unreal.titansrebirth.components.TRComponents;
 import me.unreal.titansrebirth.particle.TRParticles;
+import me.unreal.titansrebirth.util.ItemTracker;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
@@ -15,13 +21,48 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.World;
+
+import java.util.List;
 
 public class DawnBladeItem extends SwordItem {
+    private static long lastParticleTime = 0;
+    private static long currentChargeTicks = 0;
+    private static float currentChargePercent = 0;
+    private static final int MAX_CHARGE = 100;
+    private static final int MAX_CHARGE_TICKS = 432000; //36 ingame days
+
     public DawnBladeItem(ToolMaterial toolMaterial, Settings settings) {
         super(toolMaterial, settings);
     }
 
-    private static long lastParticleTime = 0;
+
+    @Override
+    public ItemStack getDefaultStack() {
+        TitansRebirth.LOGGER.info("getDefaultStack called for {}", this);
+        ItemStack stack = super.getDefaultStack();
+        stack.set(TRComponents.HOLD_TIME, 0L); // Initialize HOLD_TIME component
+        return stack;
+    }
+
+
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        long ticks = ItemTracker.getHoldTime(stack);
+        updateCharge(ticks);
+        tooltip.add(Text.literal("Sun Power: " + String.format("%.1f", currentChargePercent) + "%" + " (" + ticks + " ticks)"));
+        super.appendTooltip(stack, context, tooltip, type);
+    }
+
+    private static void updateCharge(long charge) {
+        currentChargeTicks = charge;
+        currentChargePercent = (float) (currentChargeTicks * 100.0 / MAX_CHARGE_TICKS);
+        currentChargePercent = Math.min(currentChargePercent, MAX_CHARGE);
+    }
+
+
+
+
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {

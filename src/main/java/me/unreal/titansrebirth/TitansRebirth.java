@@ -1,8 +1,11 @@
 package me.unreal.titansrebirth;
 
 import me.unreal.titansrebirth.block.TRBlocks;
+import me.unreal.titansrebirth.components.TRComponents;
 import me.unreal.titansrebirth.item.TRBasicItems;
 import me.unreal.titansrebirth.item.TRItemGroups;
+import me.unreal.titansrebirth.particle.TRParticles;
+import me.unreal.titansrebirth.util.ItemTracker;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -25,6 +28,9 @@ public class TitansRebirth implements ModInitializer {
 		TRBlocks.registerModBlocks();
 		TRBasicItems.registerModItems();
 		TRItemGroups.registerItemGroups();
+		TRParticles.registerParticles();
+		TRComponents.registerDataComponents();
+		ItemTracker.initialize();
 
 
 		LOGGER.info("Hello Fabric world!");
