@@ -18,7 +18,7 @@ public class ItemTracker {
             TRBasicItems.DAWNWOOD_STICK
     );
 
-
+    private static final int UPDATE_INTERVAL = 60;
 
     public static void initialize() {
         ServerTickEvents.END_SERVER_TICK.register(server -> {
@@ -36,7 +36,10 @@ public class ItemTracker {
                     }
 
                     long currentTicks = mainHandStack.getOrDefault(TRComponents.HOLD_TIME, 0L);
-                    mainHandStack.set(TRComponents.HOLD_TIME, currentTicks + 1);
+
+                    if (world.getTime() % UPDATE_INTERVAL == 0) {
+                        mainHandStack.set(TRComponents.HOLD_TIME, currentTicks + UPDATE_INTERVAL);
+                    }
                 }
 
                 ItemStack offHandStack = player.getOffHandStack();
@@ -46,7 +49,9 @@ public class ItemTracker {
                     }
 
                     long currentTicks = offHandStack.getOrDefault(TRComponents.HOLD_TIME, 0L);
-                    offHandStack.set(TRComponents.HOLD_TIME, currentTicks + 1);
+                    if (world.getTime() % UPDATE_INTERVAL == 0) {
+                        offHandStack.set(TRComponents.HOLD_TIME, currentTicks + UPDATE_INTERVAL);
+                    }
                 }
             }
         });

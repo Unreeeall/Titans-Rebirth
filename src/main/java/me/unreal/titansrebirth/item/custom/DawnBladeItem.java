@@ -6,6 +6,7 @@ import me.unreal.titansrebirth.components.TRComponents;
 import me.unreal.titansrebirth.particle.TRParticles;
 import me.unreal.titansrebirth.util.ItemTracker;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -48,10 +49,16 @@ public class DawnBladeItem extends SwordItem {
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        super.appendTooltip(stack, context, tooltip, type);
         long ticks = ItemTracker.getHoldTime(stack);
         updateCharge(ticks);
         tooltip.add(Text.literal("Sun Power: " + String.format("%.1f", currentChargePercent) + "%" + " (" + ticks + " ticks)"));
-        super.appendTooltip(stack, context, tooltip, type);
+
+        if(Screen.hasShiftDown()) {
+            tooltip.add(Text.literal("Attack Damage: +5").styled(style -> style.withColor(0x00AF00)));
+            tooltip.add(Text.literal("Attack Speed: -2.8").styled(style -> style.withColor(0x00AF00)));
+        }
+
     }
 
     private static void updateCharge(long charge) {
@@ -100,8 +107,8 @@ public class DawnBladeItem extends SwordItem {
         Vec3d startPos = attacker.getPos().add(0, attacker.getEyeHeight(attacker.getPose()) -0.2F, 0);
         Vec3d direction = attacker.getRotationVec(0.0F).normalize();
         float speed = 0.5F; // Blocks per tick
-        float maxDistance = 100.0F;
-        float damage = 7.0F;
+        float maxDistance = 0.0F + currentChargePercent;
+        float damage = 1.0F + (currentChargePercent / 100.0F * 14.0F);
         float particleSpacing = 0.5F;
 
         // Schedule a tick loop to simulate the wave
