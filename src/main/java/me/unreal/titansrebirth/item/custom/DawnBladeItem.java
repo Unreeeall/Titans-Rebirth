@@ -1,5 +1,6 @@
 package me.unreal.titansrebirth.item.custom;
 
+import me.unreal.titansrebirth.particle.TRParticles;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -55,17 +56,19 @@ public class DawnBladeItem extends SwordItem {
 
     private void spawnParticleWave(LivingEntity attacker) {
         ServerWorld world = (ServerWorld) attacker.getWorld();
-        Vec3d startPos = attacker.getPos().add(0, attacker.getEyeHeight(attacker.getPose()) -0.5F, 0);
+        Vec3d startPos = attacker.getPos().add(0, attacker.getEyeHeight(attacker.getPose()) -0.2F, 0);
         Vec3d direction = attacker.getRotationVec(0.0F).normalize();
-        float speed = 0.05F; // Blocks per tick
+        float speed = 0.5F; // Blocks per tick
         float maxDistance = 100.0F;
         float damage = 7.0F;
+        float particleSpacing = 0.5F;
 
         // Schedule a tick loop to simulate the wave
         new Object() {
             private int ticks = 0;
             private Vec3d pos = startPos;
             private final double maxTicks = maxDistance / speed;
+            private double distanceTraveled = 0.0;
 
             public void tick() {
                 if (ticks >= maxTicks || world.isClient) {
@@ -74,16 +77,21 @@ public class DawnBladeItem extends SwordItem {
 
                 // Move the wave
                 pos = pos.add(direction.multiply(speed));
+                distanceTraveled += speed;
                 ticks++;
 
                 // Spawn particles (visible to all clients)
-                world.spawnParticles(
-                        ParticleTypes.END_ROD,
-                        pos.x, pos.y, pos.z,
-                        1, // Number of particles
-                        0.5, 0.5, 0.5, // Spread
-                        0.1 // Speed
-                );
+                if (distanceTraveled >= particleSpacing){
+                    Vec3d particleVelocity = direction.multiply(0.1);
+                    world.spawnParticles(
+                            TRParticles.DAWN_BEAM_PARTICLE,
+                            pos.x, pos.y, pos.z,
+                            1, // Number of particles
+                            particleVelocity.x, particleVelocity.y, particleVelocity.z, // Spread
+                            0 // Speed
+                    );
+                }
+
 
                 // Check for block collision
                 if (!world.getBlockState(BlockPos.ofFloored(pos)).isAir()) {
@@ -91,7 +99,7 @@ public class DawnBladeItem extends SwordItem {
                 }
 
                 // Check for entity collisions
-                Box hitBox = new Box(pos, pos).expand(1.5); // 1x1x1 hitbox
+                Box hitBox = new Box(pos, pos).expand(1.5, 0.5, 0.5); // 3 wide (x), 1 high (y), 1 deep (z)
                 for (Entity entity : world.getEntitiesByClass(Entity.class, hitBox, e -> e != attacker && e instanceof LivingEntity)) {
                     LivingEntity target = (LivingEntity) entity;
                     target.damage(world.getDamageSources().playerAttack((PlayerEntity) attacker), damage);
