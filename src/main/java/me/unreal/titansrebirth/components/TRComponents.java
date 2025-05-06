@@ -12,6 +12,7 @@ import java.util.function.UnaryOperator;
 public class TRComponents {
     public static final ComponentType<Long> HOLD_TIME = register("hold_time", builder -> builder.codec(Codec.LONG));
     public static final ComponentType<Integer> DAWN_CHARGE_LEVEL = register("dawn_charge_level", builder -> builder.codec(Codec.INT));
+    public static final ComponentType<Boolean> CAN_CHARGE = register("can_charge", builder -> builder.codec(Codec.BOOL));
 
 
     private static <T> ComponentType<T> register(String name, UnaryOperator<ComponentType.Builder<T>> builderUnaryOperator) {

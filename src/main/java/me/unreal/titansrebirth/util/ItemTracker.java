@@ -31,26 +31,30 @@ public class ItemTracker {
                 ItemStack mainHandStack = player.getMainHandStack();
 
                 if (isDaytime && !mainHandStack.isEmpty() && DAWN_TOOLS.contains(mainHandStack.getItem())) {
-                    if (mainHandStack.get(TRComponents.HOLD_TIME) == null) {
-                        mainHandStack.set(TRComponents.HOLD_TIME, 0L);
-                    }
+                    if(mainHandStack.get(TRComponents.CAN_CHARGE) != null && Boolean.TRUE.equals(mainHandStack.get(TRComponents.CAN_CHARGE))) {
+                        if (mainHandStack.get(TRComponents.HOLD_TIME) == null) {
+                            mainHandStack.set(TRComponents.HOLD_TIME, 0L);
+                        }
 
-                    long currentTicks = mainHandStack.getOrDefault(TRComponents.HOLD_TIME, 0L);
+                        long currentTicks = mainHandStack.getOrDefault(TRComponents.HOLD_TIME, 0L);
 
-                    if (world.getTime() % UPDATE_INTERVAL == 0) {
-                        mainHandStack.set(TRComponents.HOLD_TIME, currentTicks + UPDATE_INTERVAL);
+                        if (world.getTime() % UPDATE_INTERVAL == 0) {
+                            mainHandStack.set(TRComponents.HOLD_TIME, currentTicks + UPDATE_INTERVAL);
+                        }
                     }
                 }
 
                 ItemStack offHandStack = player.getOffHandStack();
                 if (isDaytime && !offHandStack.isEmpty() && DAWN_TOOLS.contains(offHandStack.getItem())) {
-                    if (offHandStack.get(TRComponents.HOLD_TIME) == null) {
-                        offHandStack.set(TRComponents.HOLD_TIME, 0L);
-                    }
+                    if (offHandStack.get(TRComponents.CAN_CHARGE) != null && Boolean.TRUE.equals(offHandStack.get(TRComponents.CAN_CHARGE))) {
+                        if (offHandStack.get(TRComponents.HOLD_TIME) == null) {
+                            offHandStack.set(TRComponents.HOLD_TIME, 0L);
+                        }
 
-                    long currentTicks = offHandStack.getOrDefault(TRComponents.HOLD_TIME, 0L);
-                    if (world.getTime() % UPDATE_INTERVAL == 0) {
-                        offHandStack.set(TRComponents.HOLD_TIME, currentTicks + UPDATE_INTERVAL);
+                        long currentTicks = offHandStack.getOrDefault(TRComponents.HOLD_TIME, 0L);
+                        if (world.getTime() % UPDATE_INTERVAL == 0) {
+                            offHandStack.set(TRComponents.HOLD_TIME, currentTicks + UPDATE_INTERVAL);
+                        }
                     }
                 }
             }

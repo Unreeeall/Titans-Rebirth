@@ -15,7 +15,7 @@ public class TRItemGroups {
 
     public static final ItemGroup TR_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TitansRebirth.MOD_ID, "tr_blocks"),
-            FabricItemGroup.builder().displayName(Text.translatable("Titans Rebirth Blocks"))
+            FabricItemGroup.builder().displayName(Text.literal("Titans Rebirth Blocks"))
                     .icon(() -> new ItemStack(TRBlocks.DAWNWOOD_LOG)).entries((displayContext, entries) -> {
                         /* Dawnwood */
                         entries.add(TRBlocks.DAWNWOOD_LOG);
@@ -43,30 +43,39 @@ public class TRItemGroups {
 
     public static final ItemGroup TR_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TitansRebirth.MOD_ID, "tr_items"),
-            FabricItemGroup.builder().displayName(Text.translatable("Titans Rebirth Items"))
+            FabricItemGroup.builder().displayName(Text.literal("Titans Rebirth Items"))
                     .icon(() -> new ItemStack(TRBasicItems.DAWNWOOD_STICK)).entries((displayContext, entries) -> {
                         entries.add(TRBasicItems.DAWNWOOD_STICK);
-                        //entries.add(TRBasicItems.DAWNWOOD_STICK2);
                         entries.add(TRBasicItems.DAWN_BLADE);
+
+                        ItemStack dawnBladeLevel0 = new ItemStack(TRBasicItems.DAWN_BLADE);
+                        dawnBladeLevel0.set(TRComponents.HOLD_TIME, 0L);
+                        dawnBladeLevel0.set(TRComponents.CAN_CHARGE, true);
+                        entries.add(dawnBladeLevel0);
 
                         ItemStack dawnBladeLevel1 = new ItemStack(TRBasicItems.DAWN_BLADE);
                         dawnBladeLevel1.set(TRComponents.HOLD_TIME, 20000L);
+                        dawnBladeLevel1.set(TRComponents.CAN_CHARGE, false);
                         entries.add(dawnBladeLevel1);
 
                         ItemStack dawnBladeLevel2 = new ItemStack(TRBasicItems.DAWN_BLADE);
                         dawnBladeLevel2.set(TRComponents.HOLD_TIME, 60000L);
+                        dawnBladeLevel2.set(TRComponents.CAN_CHARGE, false);
                         entries.add(dawnBladeLevel2);
 
                         ItemStack dawnBladeLevel3 = new ItemStack(TRBasicItems.DAWN_BLADE);
                         dawnBladeLevel3.set(TRComponents.HOLD_TIME, 132000L);
+                        dawnBladeLevel3.set(TRComponents.CAN_CHARGE, false);
                         entries.add(dawnBladeLevel3);
 
                         ItemStack dawnBladeLevel4 = new ItemStack(TRBasicItems.DAWN_BLADE);
                         dawnBladeLevel4.set(TRComponents.HOLD_TIME, 252000L);
+                        dawnBladeLevel4.set(TRComponents.CAN_CHARGE, false);
                         entries.add(dawnBladeLevel4);
 
                         ItemStack dawnBladeLevel5 = new ItemStack(TRBasicItems.DAWN_BLADE);
                         dawnBladeLevel5.set(TRComponents.HOLD_TIME, 432000L);
+                        dawnBladeLevel5.set(TRComponents.CAN_CHARGE, false);
                         entries.add(dawnBladeLevel5);
                     }).build());
 

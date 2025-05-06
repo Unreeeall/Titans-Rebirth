@@ -41,9 +41,10 @@ public class DawnBladeItem extends SwordItem {
 
     @Override
     public ItemStack getDefaultStack() {
-        TitansRebirth.LOGGER.info("getDefaultStack called for {}", this);
         ItemStack stack = super.getDefaultStack();
         stack.set(TRComponents.HOLD_TIME, 0L);
+        stack.set(TRComponents.CAN_CHARGE, true);
+        TitansRebirth.LOGGER.info("getDefaultStack called for {}", this);
         return stack;
     }
 
@@ -53,10 +54,13 @@ public class DawnBladeItem extends SwordItem {
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         super.appendTooltip(stack, context, tooltip, type);
         long ticks = ItemTracker.getHoldTime(stack);
+        Boolean canCharge = stack.get(TRComponents.CAN_CHARGE);
         updateCharge(ticks);
         tooltip.add(Text.literal("Power: " + String.format("%.1f", currentChargePercent) + "%" + " (" + ticks + " ticks)"));
         tooltip.add(Text.literal("Level: ").styled(style -> style.withColor(8650846))
                 .append(Text.literal(String.valueOf(getPowerLevel(ticks))).styled(style -> style.withColor(16754432))));
+
+        tooltip.add(Text.literal("Can charge: " + (canCharge != null ? canCharge : "unset")).styled(style -> style.withColor(8650846)));
 
         if(Screen.hasShiftDown()) {
             tooltip.add(Text.literal("Attack Damage: +5").styled(style -> style.withColor(0x00AF00)));
