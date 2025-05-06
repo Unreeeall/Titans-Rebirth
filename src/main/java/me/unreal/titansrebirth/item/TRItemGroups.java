@@ -2,6 +2,7 @@ package me.unreal.titansrebirth.item;
 
 import me.unreal.titansrebirth.TitansRebirth;
 import me.unreal.titansrebirth.block.TRBlocks;
+import me.unreal.titansrebirth.components.TRComponents;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -47,6 +48,26 @@ public class TRItemGroups {
                         entries.add(TRBasicItems.DAWNWOOD_STICK);
                         //entries.add(TRBasicItems.DAWNWOOD_STICK2);
                         entries.add(TRBasicItems.DAWN_BLADE);
+
+                        ItemStack dawnBladeLevel1 = new ItemStack(TRBasicItems.DAWN_BLADE);
+                        dawnBladeLevel1.set(TRComponents.HOLD_TIME, 20000L);
+                        entries.add(dawnBladeLevel1);
+
+                        ItemStack dawnBladeLevel2 = new ItemStack(TRBasicItems.DAWN_BLADE);
+                        dawnBladeLevel2.set(TRComponents.HOLD_TIME, 60000L);
+                        entries.add(dawnBladeLevel2);
+
+                        ItemStack dawnBladeLevel3 = new ItemStack(TRBasicItems.DAWN_BLADE);
+                        dawnBladeLevel3.set(TRComponents.HOLD_TIME, 132000L);
+                        entries.add(dawnBladeLevel3);
+
+                        ItemStack dawnBladeLevel4 = new ItemStack(TRBasicItems.DAWN_BLADE);
+                        dawnBladeLevel4.set(TRComponents.HOLD_TIME, 252000L);
+                        entries.add(dawnBladeLevel4);
+
+                        ItemStack dawnBladeLevel5 = new ItemStack(TRBasicItems.DAWN_BLADE);
+                        dawnBladeLevel5.set(TRComponents.HOLD_TIME, 432000L);
+                        entries.add(dawnBladeLevel5);
                     }).build());
 
 

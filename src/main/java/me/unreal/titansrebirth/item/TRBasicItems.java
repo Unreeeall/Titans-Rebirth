@@ -21,7 +21,7 @@ public class TRBasicItems {
     public static final Item DAWN_BLADE = registerItem("dawn_blade",
             new DawnBladeItem(TRToolMaterials.DAWN, new Item.Settings()
                     .rarity(Rarity.RARE)
-                    .attributeModifiers(SwordItem.createAttributeModifiers(TRToolMaterials.DAWN, 5, -2.8F))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(TRToolMaterials.DAWN, 3, -2.8F))));
 
 
 
