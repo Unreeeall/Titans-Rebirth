@@ -49,6 +49,10 @@ public class TRItemGroups {
                         entries.add(TRBasicItems.DAWN_BLADE);
 
 
+                        ItemStack dawnBladeLevel0noCharge = new ItemStack(TRBasicItems.DAWN_BLADE);
+                        dawnBladeLevel0noCharge.set(TRComponents.HOLD_TIME, 0L);
+                        dawnBladeLevel0noCharge.set(TRComponents.CAN_CHARGE, false);
+                        entries.add(dawnBladeLevel0noCharge);
 
                         ItemStack dawnBladeLevel1 = new ItemStack(TRBasicItems.DAWN_BLADE);
                         dawnBladeLevel1.set(TRComponents.HOLD_TIME, 20000L);
