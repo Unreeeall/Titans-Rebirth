@@ -5,13 +5,12 @@ import me.unreal.titansrebirth.util.TRTags;
 import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 
 import java.util.function.Supplier;
 
 public enum TRToolMaterials implements ToolMaterial {
-    DAWN(TRTags.Blocks.INCORRECT_FOR_DAWN_TOOL, 1500, 7.0F, 2.0F, 22, () -> Ingredient.ofItems(TRBasicItems.DAWNWOOD_STICK));
+    DAWN(TRTags.Blocks.INCORRECT_FOR_DAWN_TOOL, 1500, 7.0F, 2.0F, 22, () -> Ingredient.ofItems(TRItems.DAWNWOOD_STICK));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

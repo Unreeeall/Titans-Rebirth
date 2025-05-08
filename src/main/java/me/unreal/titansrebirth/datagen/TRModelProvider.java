@@ -1,7 +1,7 @@
 package me.unreal.titansrebirth.datagen;
 
 import me.unreal.titansrebirth.block.TRBlocks;
-import me.unreal.titansrebirth.item.TRBasicItems;
+import me.unreal.titansrebirth.item.TRItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -35,8 +35,13 @@ public class TRModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(TRBasicItems.DAWNWOOD_STICK, Models.HANDHELD_ROD);
-        itemModelGenerator.register(TRBasicItems.DAWNWOOD_STICK2, Models.GENERATED);
-        //itemModelGenerator.register(TRBasicItems.DAWN_BLADE, Models.HANDHELD);
+        itemModelGenerator.register(TRItems.DAWNWOOD_STICK, Models.HANDHELD_ROD);
+        itemModelGenerator.register(TRItems.DAWNWOOD_STICK2, Models.GENERATED);
+        itemModelGenerator.register(TRItems.SUNLIT_SHARD, Models.GENERATED);
+        itemModelGenerator.register(TRItems.DAWNWOOD_SAP, Models.GENERATED);
+        itemModelGenerator.register(TRItems.RAW_AURIC, Models.GENERATED);
+        itemModelGenerator.register(TRItems.AURIC, Models.GENERATED);
+        itemModelGenerator.register(TRItems.SAP_TAP, Models.GENERATED);
+        itemModelGenerator.register(TRItems.SYLVAN_RESERVOIR, Models.GENERATED);
     }
 }

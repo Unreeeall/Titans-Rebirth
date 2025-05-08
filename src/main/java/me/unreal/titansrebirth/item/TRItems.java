@@ -3,8 +3,6 @@ package me.unreal.titansrebirth.item;
 import me.unreal.titansrebirth.TitansRebirth;
 import me.unreal.titansrebirth.components.TRComponents;
 import me.unreal.titansrebirth.item.custom.DawnBladeItem;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.item.*;
@@ -13,9 +11,29 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
-public class TRBasicItems {
+public class TRItems {
 
     public static final Item DAWNWOOD_STICK = registerItem("dawnwood_stick",
+            new Item(new Item.Settings()));
+
+    public static final Item SUNLIT_SHARD = registerItem("sunlit_shard",
+            new Item(new Item.Settings()));
+
+    public static final Item DAWNWOOD_SAP = registerItem("dawnwood_sap",
+            new Item(new Item.Settings()));
+
+    // May rename to Aurite
+    public static final Item RAW_AURIC = registerItem("raw_auric",
+            new Item(new Item.Settings()));
+
+    // May rename to Aurite
+    public static final Item AURIC = registerItem("auric",
+            new Item(new Item.Settings()));
+
+    public static final Item SAP_TAP = registerItem("sap_tap",
+            new Item(new Item.Settings()));
+
+    public static final Item SYLVAN_RESERVOIR = registerItem("sylvan_reservoir",
             new Item(new Item.Settings()));
 
     public static final Item DAWNWOOD_STICK2 = registerItem("dawnwood_stick2",

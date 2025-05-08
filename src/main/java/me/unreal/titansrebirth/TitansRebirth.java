@@ -2,7 +2,7 @@ package me.unreal.titansrebirth;
 
 import me.unreal.titansrebirth.block.TRBlocks;
 import me.unreal.titansrebirth.components.TRComponents;
-import me.unreal.titansrebirth.item.TRBasicItems;
+import me.unreal.titansrebirth.item.TRItems;
 import me.unreal.titansrebirth.item.TRItemGroups;
 import me.unreal.titansrebirth.particle.TRParticles;
 import me.unreal.titansrebirth.util.ItemTracker;
@@ -26,7 +26,7 @@ public class TitansRebirth implements ModInitializer {
 		// Proceed with mild caution.
 
 		TRBlocks.registerModBlocks();
-		TRBasicItems.registerModItems();
+		TRItems.registerModItems();
 		TRItemGroups.registerItemGroups();
 		TRParticles.registerParticles();
 		TRComponents.registerDataComponents();

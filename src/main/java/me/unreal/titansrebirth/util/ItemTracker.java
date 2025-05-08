@@ -1,21 +1,20 @@
 package me.unreal.titansrebirth.util;
 
 import me.unreal.titansrebirth.components.TRComponents;
-import me.unreal.titansrebirth.item.TRBasicItems;
+import me.unreal.titansrebirth.item.TRItems;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.text.Text;
 
 import java.util.Set;
 
 public class ItemTracker {
 
     private static final Set<Item> DAWN_TOOLS = Set.of(
-            TRBasicItems.DAWN_BLADE,
-            TRBasicItems.DAWNWOOD_STICK
+            TRItems.DAWN_BLADE,
+            TRItems.DAWNWOOD_STICK
     );
 
     private static final int UPDATE_INTERVAL = 60;
