@@ -42,8 +42,6 @@ public class DawnBladeItem extends SwordItem {
     @Override
     public ItemStack getDefaultStack() {
         ItemStack stack = super.getDefaultStack();
-        stack.set(TRComponents.HOLD_TIME, 0L);
-        stack.set(TRComponents.CAN_CHARGE, true);
         TitansRebirth.LOGGER.info("getDefaultStack called for {}", this);
         return stack;
     }

@@ -1,9 +1,12 @@
 package me.unreal.titansrebirth.item;
 
 import me.unreal.titansrebirth.TitansRebirth;
+import me.unreal.titansrebirth.components.TRComponents;
 import me.unreal.titansrebirth.item.custom.DawnBladeItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -21,6 +24,9 @@ public class TRBasicItems {
     public static final Item DAWN_BLADE = registerItem("dawn_blade",
             new DawnBladeItem(TRToolMaterials.DAWN, new Item.Settings()
                     .rarity(Rarity.RARE)
+                    .component(TRComponents.CAN_CHARGE, true)
+                    .component(TRComponents.HOLD_TIME, 0L)
+                    .component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true))
                     .attributeModifiers(SwordItem.createAttributeModifiers(TRToolMaterials.DAWN, 3, -2.8F))));
 
 

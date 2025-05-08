@@ -48,10 +48,7 @@ public class TRItemGroups {
                         entries.add(TRBasicItems.DAWNWOOD_STICK);
                         entries.add(TRBasicItems.DAWN_BLADE);
 
-                        ItemStack dawnBladeLevel0 = new ItemStack(TRBasicItems.DAWN_BLADE);
-                        dawnBladeLevel0.set(TRComponents.HOLD_TIME, 0L);
-                        dawnBladeLevel0.set(TRComponents.CAN_CHARGE, true);
-                        entries.add(dawnBladeLevel0);
+
 
                         ItemStack dawnBladeLevel1 = new ItemStack(TRBasicItems.DAWN_BLADE);
                         dawnBladeLevel1.set(TRComponents.HOLD_TIME, 20000L);
