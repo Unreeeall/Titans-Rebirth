@@ -7,6 +7,7 @@ import me.unreal.titansrebirth.util.ItemTracker;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
@@ -52,17 +53,18 @@ public class DawnBladeItem extends SwordItem {
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         super.appendTooltip(stack, context, tooltip, type);
         long ticks = ItemTracker.getHoldTime(stack);
+        int level = getPowerLevel(ticks);
         Boolean canCharge = stack.get(TRComponents.CAN_CHARGE);
         updateCharge(ticks);
         tooltip.add(Text.literal("Power: " + String.format("%.1f", currentChargePercent) + "%" + " (" + ticks + " ticks)"));
         tooltip.add(Text.literal("Level: ").styled(style -> style.withColor(8650846))
-                .append(Text.literal(String.valueOf(getPowerLevel(ticks))).styled(style -> style.withColor(16754432))));
+                .append(Text.literal(String.valueOf(level)).styled(style -> style.withColor(16754432))));
 
         tooltip.add(Text.literal("Can charge: " + (canCharge != null ? canCharge : "unset")).styled(style -> style.withColor(8650846)));
 
         if(Screen.hasShiftDown()) {
-            tooltip.add(Text.literal("Attack Damage: +5").styled(style -> style.withColor(0x00AF00)));
-            tooltip.add(Text.literal("Attack Speed: -2.8").styled(style -> style.withColor(0x00AF00)));
+            tooltip.add(Text.literal("Bonus Attack Damage: ").styled(style -> style.withColor(8650846))
+                    .append(Text.literal(String.valueOf(getExtraDmgForLevel(level))).styled(style -> style.withColor(16754432))));
         }
 
     }
@@ -109,11 +111,26 @@ public class DawnBladeItem extends SwordItem {
         return 2.0F;
     }
 
+    private float getExtraDmgForLevel(int level) {
+        if(level == 1) return 0.5F;
+        if(level == 2) return 1.0F;
+        if(level == 3) return 1.5F;
+        if(level == 4) return 2.0F;
+        if(level == 5) return 2.5F;
+        return 0.0F;
+    }
 
 
-
-
-
+    @Override
+    public float getBonusAttackDamage(Entity target, float baseAttackDamage, DamageSource damageSource) {
+        ItemStack stack = damageSource.getWeaponStack();
+        if(stack == null || stack.getItem() != this) {
+            return 0.0F;
+        }
+        long ticks = ItemTracker.getHoldTime(stack);
+        int level = getPowerLevel(ticks);
+        return getExtraDmgForLevel(level);
+    }
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
