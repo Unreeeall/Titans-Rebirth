@@ -83,6 +83,16 @@ public class TRBlocks {
     public static final Block SMOOTH_DAWNWOOD_PLANKS = registerBlock("smooth_dawnwood_planks",
             new Block(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS)));
 
+
+    /* Auric- / Auriteore */
+
+    public static final Block AURIC_ORE = registerBlock("auric_ore",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(3f)
+                    .requiresTool()
+            ));
+
+
     /* Netherthorn */
     public static final Block NETHERTHORN_LOG = registerBlock("netherthorn_log",
             new NetherThornLogBlock(AbstractBlock.Settings.create()

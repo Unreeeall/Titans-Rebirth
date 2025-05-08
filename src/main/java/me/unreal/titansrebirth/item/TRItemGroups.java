@@ -35,6 +35,8 @@ public class TRItemGroups {
                         entries.add(TRBlocks.DAWNWOOD_WALL);
                         entries.add(TRBlocks.SMOOTH_DAWNWOOD_PLANKS);
 
+                        entries.add(TRBlocks.AURIC_ORE);
+
 
                         entries.add(TRBlocks.NETHERTHORN_LOG);
 

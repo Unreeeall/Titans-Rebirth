@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-08T07:58:23.5817082	Titans Rebirth/Model Definitions
+// 1.21.1	2025-05-08T08:04:03.2429914	Titans Rebirth/Model Definitions
 caae1a7369b0890f5d251e6fb0f30eb3a6c39366 assets\titansrebirth\models\block\dawnwood_slab.json
 585692c447017dbdfdb0dcd57c423be21c30f537 assets\titansrebirth\blockstates\dawnwood_fence_gate.json
 90202ec1dddc4bc8c6543746af81080043378289 assets\titansrebirth\models\block\dawnwood_fence_inventory.json
@@ -42,6 +42,7 @@ edef55eee143d87f452ab63ef2059504951bccfb assets\titansrebirth\models\block\dawnw
 5c31117444ce6f9b5666af9258b049468c5c8f93 assets\titansrebirth\models\item\dawnwood_wood.json
 42523e8e8f8a40eb72f07d17168c084e07146c76 assets\titansrebirth\blockstates\dawnwood_log.json
 8c2ca059d121c1cf15a4241ee10e9c5366099557 assets\titansrebirth\models\block\dawnwood_button_pressed.json
+fcf9ba274c86442b8ccf07e6db024c132956622c assets\titansrebirth\models\item\auric_ore.json
 3f09ace51da40fe2d0fa68e37675cbdd68546297 assets\titansrebirth\models\item\sylvan_reservoir.json
 904ad5febfb1a625f038d84e26c6da8e13f09d90 assets\titansrebirth\models\item\dawnwood_wall.json
 011024bc36f76fc6b4518b8fea3f74b4a9ba73d3 assets\titansrebirth\models\item\sunlit_shard.json
@@ -50,6 +51,7 @@ b64508efd608053752162d70750ad86f756d150c assets\titansrebirth\models\block\dawnw
 e119b18544cc0310d1588f8e51a06e9e0bba3a6e assets\titansrebirth\models\item\dawnwood_door.json
 b0d129461c86d28c4dbc4f68c2d1f7b9a6cf9dfd assets\titansrebirth\models\item\dawnwood_pressure_plate.json
 c5d1826cea883990c7e585f71928439b7c4ba156 assets\titansrebirth\models\item\dawnwood_fence.json
+c702eeedb80b8971b537239164c6a0c874cbbeeb assets\titansrebirth\blockstates\auric_ore.json
 9915445c02227c43f80fcb93dc87290ec22e0da2 assets\titansrebirth\models\block\dawnwood_stairs_outer.json
 dfc9be55c4cf8a1d041b961aa0c0803b13b84360 assets\titansrebirth\models\item\dawnwood_sap.json
 17d3986f786ada1c7e771aad110a9e7455d36b5b assets\titansrebirth\blockstates\dawnwood_fence.json
@@ -63,6 +65,7 @@ c55127f557fa0b38ca8531ed5cf2457453dd6c3e assets\titansrebirth\models\item\dawnwo
 9c5c1c6b5255e17271291e0d345c3f16f7623cfb assets\titansrebirth\models\block\stripped_dawnwood_log.json
 5f7fe6741b474b1f3cfd352ceef669bd86f79927 assets\titansrebirth\blockstates\dawnwood_planks.json
 8cdc558bfa244c4e40bba4ec0494fbb592d87d30 assets\titansrebirth\models\item\dawnwood_stairs.json
+20475395b0e9623b8eaa80cc370bec7535151530 assets\titansrebirth\models\block\auric_ore.json
 0f963232a2eef5f6436d88efb89275f2c1d3927b assets\titansrebirth\blockstates\dawnwood_leaves.json
 b5acabe53be14c635c688ef710ccf51ef0813431 assets\titansrebirth\models\block\dawnwood_door_bottom_left.json
 f0a9712461f7adbc5902eed155036a29fc397a63 assets\titansrebirth\blockstates\dawnwood_wood.json
